@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadeepa Lakshan - Designer & Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+     <link rel="website Icon" type ="png" href="icon.png">
+</head>
+<body class="bg-slate-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold text-blue-600">SL</a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition-colors">Portfolio</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-gray-500 hover:text-gray-700" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-800 bg-opacity-50 z-40 hidden" onclick="toggleMenu()">
+        <div class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform transition-transform duration-300 translate-x-full">
+            <div class="flex flex-col p-8 space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-blue-600" onclick="toggleMenu()">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600" onclick="toggleMenu()">About</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600" onclick="toggleMenu()">Services</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-blue-600" onclick="toggleMenu()">Portfolio</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600" onclick="toggleMenu()">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-gray-900">
+                        Hi, I'm <span class="text-blue-600">Sadeepa Lakshan</span>
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Graphic Designer & Aspiring Software Engineer from Sri Lanka
+                    </p>
+                    <div class="mt-8 flex space-x-4">
+                        <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                            Contact Me
+                        </a>
+                        <a href="#portfolio" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                            View Work
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-8 lg:mt-0 lg:w-1/2 flex justify-center">
+                    <img src="icon.png" alt="Sadeepa Lakshan" class="rounded-full w-64 h-64 object-cover shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900">About Me</h2>
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <!-- Software Development -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:-translate-y-1 transition-transform duration-300">
+                    <i class="fas fa-laptop-code text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Software Development</h3>
+                    <p class="text-gray-600">Passionate about creating innovative solutions through code. Currently expanding my knowledge in software engineering.</p>
+                </div>
+                <!-- Graphic Design -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:-translate-y-1 transition-transform duration-300">
+                    <i class="fas fa-paint-brush text-3xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Graphic Design</h3>
+                    <p class="text-gray-600">Creating eye-catching designs for YouTube thumbnails, logos, and digital marketing materials.</p>
+                </div>
+                <!-- Content Creation -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:-translate-y-1 transition-transform duration-300">
+                    <i class="fas fa-video text-3xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Content Creation</h3>
+                    <p class="text-gray-600">Running SL Sadeepa Tec YouTube channel, sharing tech tutorials and insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900">My Services</h2>
+            <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Logo Design -->
+                <div class="bg-white rounded-xl shadow-md p-8 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Logo Design</h3>
+                    <p class="text-gray-600 mb-4">Custom logo design that captures your brand's essence.</p>
+                    <a href="https://www.fiverr.com/sadeepapemasiri?public_mode=true" class="text-blue-600 hover:text-blue-700">Learn More →</a>
+                </div>
+                <!-- YouTube Thumbnails -->
+                <div class="bg-white rounded-xl shadow-md p-8 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">YouTube Thumbnails</h3>
+                    <p class="text-gray-600 mb-4">Eye-catching thumbnails that drive more clicks and views.</p>
+                    <a href="https://www.fiverr.com/sadeepapemasiri?public_mode=true" class="text-blue-600 hover:text-blue-700">Learn More →</a>
+                </div>
+                <!-- Web Development -->
+                <div class="bg-white rounded-xl shadow-md p-8 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600 mb-4">Modern, responsive websites built with the latest technologies.</p>
+                    <a href="https://www.fiverr.com/sadeepapemasiri?public_mode=true" class="text-blue-600 hover:text-blue-700" link="real" >Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900">My Work</h2>
+            <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Items -->
+                <div class="group relative rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <img src="logo.png" alt="Project 1" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 p-6">
+                            <h3 class="text-white text-xl font-semibold">Logo Design</h3>
+                            <p class="text-gray-200">Brand Identity Project</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <img src="Untitled-1.png" alt="Project 1" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 p-6">
+                            <h3 class="text-white text-xl font-semibold">Logo Design</h3>
+                            <p class="text-gray-200">Brand Identity Project</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <img src="https://i9.ytimg.com/vi_webp/_5CyQn_-khw/maxresdefault.webp?v=6710afdb&sqp=CMimx7kG&rs=AOn4CLCmu4nQe-6vLFRF3V6y-8Tp_RS_NQ" alt="Project 2" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 p-6">
+                            <h3 class="text-white text-xl font-semibold">YouTube Thumbnail</h3>
+                            <p class="text-gray-200">Tech Tutorial Series</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <img src="world travel palses.png" alt="Project 3" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 p-6">
+                            <h3 class="text-white text-xl font-semibold">YouTube Thumbnail</h3>
+                            <p class="text-gray-200">Travel Tutorial Series</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                    <img src="FOOD FLAYER 3.png" alt="Project 2" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 p-6">
+                            <h3 class="text-white text-xl font-semibold">Food Flayer Design</h3>
+                            <p class="text-gray-200">Graphic Designer Series</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900">Get In Touch</h2>
+            <div class="mt-12 max-w-3xl mx-auto">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Message</label>
+                            <textarea rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Sadeepa Lakshan</h3>
+                <p class="text-gray-400">Graphic Designer & Software Engineer</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                    <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                    <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Connect With Me</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="https://www.youtube.com/@SLSadeepaTec" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fab fa-youtube text-xl"></i>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://chat.whatsapp.com/your-invite-link" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://t.me/slsadeepatecofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fab fa-telegram text-xl"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="https://www.fiverr.com/sadeepapemasiri" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fas fa-globe text-xl"></i>
+                        <span>Fiverr</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sadeepa-pemasiri/" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fab fa-linkedin text-xl"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://slsadeepatec.blogspot.com" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fab fa-blogger text-xl"></i>
+                        <span>Blog</span>
+                    </a>
+                    <a href="https://github.com/sadeepas" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fab fa-github text-xl"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://slsadeepatec.com" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fas fa-globe text-xl"></i>
+                        <span>Website 1</span>
+                    </a>
+                    <a href="https://sadeepapemasiri.com" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fas fa-globe text-xl"></i>
+                        <span>Website 2</span>
+                    </a>
+                    <a href="https://harvest-pufferfish-20e.notion.site/Hi-I-m-Sadeepa-Lakshan-1351dcb2bac88064b500dbe0e1594ecd" target="_blank" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fas fa-globe text-xl"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-envelope"></i>
+                        <span class="text-gray-400">sadeepapemasiri2@gmail.com</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="text-gray-400">Sri Lanka</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+            <p class="text-gray-400">&copy; 2024 Sadeepa Lakshan. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
